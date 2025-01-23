@@ -24,8 +24,7 @@ jobs:
   
       - name: Deploy to EC2
         run: |
-          ssh -o StrictHostKeyChecking=no -i /tmp/ec2_key.pem ubuntu@ec2-13-61-177-118.eu-north-1.compute.amazonaws.com
- << 'EOF'
+          ssh -o StrictHostKeyChecking=no -i /tmp/ec2_key.pem ubuntu@ec2-13-61-177-118.eu-north-1.compute.amazonaws.com << 'EOF'
             git pull origin main
             ./deploy.sh  # Replace with your actual deployment commands
           EOF
