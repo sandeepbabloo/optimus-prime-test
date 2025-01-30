@@ -17,7 +17,7 @@ jobs:
       - name: Set up SSH key
         run: |
           echo "${{ secrets.EC2 }}" > /tmp/ec2.pem
-          chmod 400 /tmp/ec2_key.pem
+          chmod 400 /tmp/ec2.pem
     
       - name: Install SSH Client
         run: sudo apt-get install -y openssh-client
